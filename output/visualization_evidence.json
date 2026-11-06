@@ -1,0 +1,40 @@
+{
+  "critique": [
+    {
+      "category": "unsupported claim",
+      "problem": "The title claims Center-based rehab caused better attendance, but observational data where patients chose their own program cannot prove causation.",
+      "repair": "Use a neutral, descriptive title that states what the chart measures without claiming cause and effect."
+    },
+    {
+      "category": "truncated baseline",
+      "problem": "The y-axis starts at 76 instead of 0, which visually exaggerates a small percentage difference between the bars.",
+      "repair": "Start the y-axis at 0 and run it to 100 so bar lengths honestly represent the full percentage scale."
+    },
+    {
+      "category": "missing unit",
+      "problem": "The axes have no labels or units, leaving the reader to guess that the numbers represent attendance percentages.",
+      "repair": "Label the y-axis as 'Scheduled sessions attended (%)' and the x-axis as 'Quarter', and add percentage labels on the bars."
+    },
+    {
+      "category": "color-only encoding",
+      "problem": "The bars use red and green with the exact same 'xx' hatch pattern, making the two programs hard to distinguish in grayscale or for colorblind readers.",
+      "repair": "Use colorblind-safe colors (orange and blue) paired with distinct hatch patterns ('..' and '//') for each program."
+    },
+    {
+      "category": "distracting decoration",
+      "problem": "Thick black bar borders, heavy dark grid lines, and unnecessary top and right borders clutter the chart without adding data.",
+      "repair": "Remove the heavy grid and thick bar edges, hide the top and right spines, and place a clean legend outside the plot."
+    }
+  ],
+  "question": "How does the percentage of patients meeting the weekly exercise goal change from visit 1 to visit 4 in the Home-based and Center-based programs?",
+  "audience": "The rehab program coordinator deciding where to add follow-up coaching support.",
+  "intended_claim": "Goal attainment rises across visits in both programs, but by visit 4 Center-based is at 79% compared with 70% for Home-based (a 9-point gap).",
+  "y_measure": "Percentage of patients seen at the visit who met the 150-minute weekly exercise goal (%)",
+  "grain": "One rehab program at one follow-up visit",
+  "data_types": {
+    "program": "categorical",
+    "visit_number": "ordinal",
+    "goal_met_pct": "quantitative"
+  },
+  "text_alternative": "Line chart showing the percentage of patients meeting the 150-minute weekly exercise goal (%) on the y-axis across follow-up visits 1 to 4 on the x-axis for two programs. Home-based rehab rises from 58% at visit 1 to 70% at visit 4, while Center-based rehab rises from 57% at visit 1 to 79% at visit 4, leaving a 9-point gap (79% against 70%) at visit 4. Because patients chose their own program and each visit covers only about 45 returning patients per program, this gap is descriptive and could reflect self-selection, dropout, or chance rather than a causal effect."
+}
